@@ -1,11 +1,25 @@
 {
-  "name": "pr",
+  "name": "hola",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.4.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbarba87/crud_node_nongo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jbarba87/crud_node_nongo/issues"
+  },
+  "homepage": "https://github.com/jbarba87/crud_node_nongo#readme",
+  "description": ""
 }
