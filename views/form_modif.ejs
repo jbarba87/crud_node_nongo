@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title> Formulario Modificar </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <style>
+      .form-container{
+        border: 1px solid rgba(0,103,150,1);
+        border-radius: 5px;
+        margin-top: 20px;
+        padding: 20px;
+      }
+      
+    
+    
+    </style>
+
+  </head>
+
+
+  <body>  
+    <div class="container form-container">
+      <form method="get" action="/data_modificar">
+
+        <div class="form-group">
+            <label for="txtId">Id</label>
+            <input type="text" name="txtId" class="form-control" id="txtId" aria-describedby="idHelp" value="<%=rpta[0]._id%>" readonly>
+          </div>
+  
+
+        <div class="form-group">
+          <label for="txtNombre">Nombre</label>
+          <input type="text" name="txtNombre" class="form-control" id="txtNombre" aria-describedby="nombreHelp" value="<%=rpta[0].nombre%>">
+        </div>
+
+        <div class="form-group">
+          <label for="txtApellido">Apellido</label>
+          <input type="text" name="txtApellido" class="form-control" id="txtApellido" aria-describedby="apellidoHelp" value="<%=rpta[0].apellido%>">
+        </div>
+
+        <div class="form-group">
+          <label for="txtEspecialidad">Especialidad</label>
+          <select class="custom-select" name="txtEspecialidad">
+            <option selected>Selecione especialidad</option>
+            <option <%= (rpta[0].especialidad=="Electronica")?"selected":""%> value="Electronica">Electronica</option>
+            <option <%= (rpta[0].especialidad=="Informatica")?"selected":""%> value="Informatica">Informatica</option>
+            <option <%= (rpta[0].especialidad=="Telecomunicaciones")?"selected":""%> value="Telecomunicaciones">Telecomunicaciones</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="txtEdad">Edad</label>
+          <select class="custom-select" name="txtEdad">
+            <option selected>Selecione Edad</option>
+            <option <%= (rpta[0].edad==20)?"selected":""%> value="20">20</option>
+            <option <%= (rpta[0].edad==21)?"selected":""%> value="21">21</option>
+            <option <%= (rpta[0].edad==22)?"selected":""%> value="22">22</option>
+            <option <%= (rpta[0].edad==23)?"selected":""%> value="23">23</option>
+            <option <%= (rpta[0].edad==24)?"selected":""%> value="24">24</option>
+            <option <%= (rpta[0].edad==25)?"selected":""%> value="25">25</option>
+            <option <%= (rpta[0].edad==26)?"selected":""%> value="26">26</option>
+            <option <%= (rpta[0].edad==27)?"selected":""%> value="27">27</option>
+            <option <%= (rpta[0].edad==28)?"selected":""%> value="28">28</option>
+            <option <%= (rpta[0].edad==29)?"selected":""%> value="29">29</option>
+            <option <%= (rpta[0].edad==30)?"selected":""%> value="30">30</option>
+          </select>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    
+  </body>
+
+</html>

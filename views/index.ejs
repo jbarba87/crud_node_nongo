@@ -10,7 +10,6 @@
 
 
   <body>
-    <h1>  </h1>
   
     <div class="container">
       <h1> Lista de alumnos </h1>
@@ -30,12 +29,12 @@
 
           <% rpta.forEach( (el)=>{ %>
             <tr>
-              <th scope="row"><%- el.id %></th>
+              <th scope="row"><%- el._id %></th>
               <td><%- el.nombre %></td>
               <td><%- el.apellido %></td>
               <td><%- el.especialidad %></td>
               <td><%- el.edad %></td>
-              <td> <a href="modificar">Modificar </a> | <a href="borrar"> Borrar </a> </td>
+              <td> <a href="modificar/<%=el._id%>">Modificar </a> | <a href="borrar/<%=el._id%>"> Borrar </a> </td>
             </tr>
           <% }); %>
 
@@ -43,6 +42,8 @@
       </table>
     </div>
     
+    <a style="margin:20px" href="/ingresar"> Ingrese nuevo alumno </a>
+
   </body>
 
 </html>
